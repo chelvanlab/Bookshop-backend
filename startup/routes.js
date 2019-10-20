@@ -8,6 +8,7 @@ const error = require('../middleware/error');
 const owner = require('../route/owner');
 const employee = require('../route/employee');
 const supplier = require('../route/supplier');
+const report = require('../route/report');
 const auth = require('../route/auth');
 
 const upload = require('express-fileupload')
@@ -24,6 +25,7 @@ module.exports = function (app) {
     app.use('/owners', owner);
     app.use('/employees', employee);
     app.use('/suppliers', supplier);
+    app.use('/report',report)
     app.use('/auth', auth);
 
     

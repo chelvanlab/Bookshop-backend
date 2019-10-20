@@ -12,7 +12,7 @@ const employeeSchema = new mongoose.Schema({
 }, {
         timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
     });
-
+ 
 employeeSchema.methods.generateAuthToken = function () {
     const token = jwt.sign({
         _id: this._id
